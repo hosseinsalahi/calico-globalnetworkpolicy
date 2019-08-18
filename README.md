@@ -8,7 +8,7 @@ minikube start \
  --extra-config=kubelet.pod-cidr=10.123.0.0/16 \
  --extra-config=controller-manager.allocate-node-cidrs=true \
  --extra-config=controller-manager.cluster-cidr=10.123.0.0/16 \
- --memofry 8192
+ --memory 8192
 ```
 
 ## Deploy Calico
