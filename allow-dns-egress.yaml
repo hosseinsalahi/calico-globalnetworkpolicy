@@ -1,0 +1,15 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: allow-dns-egress
+spec:
+  types:
+  - Egress
+  egress:
+  - action: Allow
+    protocol: UDP
+    destination:
+      nets:
+        - 0.0.0.0/0
+      ports:
+        - 53

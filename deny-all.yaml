@@ -1,0 +1,8 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: deny-all
+spec:
+  types:
+  - Ingress
+  - Egress

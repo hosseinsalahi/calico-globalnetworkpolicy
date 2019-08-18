@@ -1,0 +1,18 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: allow-kube-system
+spec:
+  ingress:
+  - action: Allow
+    destination: 
+      namespaceSelector: name == 'kube-system'
+    source: {}
+  egress:
+  - action: Allow
+    destination: {}
+    source: 
+      namespaceSelector: name == 'kube-system'
+  types:
+  - Ingress
+  - Egress
