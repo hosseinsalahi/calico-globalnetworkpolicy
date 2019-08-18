@@ -20,6 +20,7 @@ kubectl create -f k8s-apps/calico.yaml
 ## Apply Initial Network Policies 
 
 ```bash
+kubectl label namespaces kube-system name=kube-system
 calicoctl create -f deny-all.yaml
 calicoctl create -f allow-coredns.yaml
 calicoctl create -f allow-dns-egress.yaml
